@@ -1,0 +1,670 @@
+*{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+
+}
+body{
+    background-color: #121212;
+    font-family: "Roboto", sans-serif;
+}
+/***********************start navbar***********************/
+
+.navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    background-color: transparent;
+    background-color: rgba(18, 18, 18, 0.95);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    
+}
+.logo{
+    font-size: 25px;
+    color: #d4a373;
+}
+.logo, .nav-link, h1 ,h3{
+font-family: "Playwrite Argentina", cursive;
+}
+.nav-link{
+  list-style: none;
+  display: flex;
+}
+.nav-link a {
+    position: relative;
+    text-decoration: none;
+    color: #f5f5f5;
+    padding-bottom: 5px;
+}
+.nav-link li a{
+    text-decoration: none;
+    padding: 15px;
+    color: #f5f5f5;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+    position: relative;
+    padding-bottom: 5px;
+
+
+}
+
+.nav-link a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0); /* مخفي في العادي */
+    width: 60%;
+    height: 2px;
+    background-color: #d4a373;
+    transition: transform 0.3s ease; /* حركة انسيابية للخط */
+}
+
+/* يظهر بس لو عليه الـ active أو الـ hover */
+.nav-link a:hover::after,
+.nav-link a.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+.nav-link li a:hover{
+    color: #d4a373;
+}
+.nav-link li a.active::after{
+content: '';
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%) scaleX(0);
+width: 60%;
+height: 2px;
+background-color:#d4a373;
+transition: transform 0.3s ease;
+}
+/* .nav-link li a.active {
+    color: #d4a373;
+} */
+.btn{
+    padding: 10px 20px;
+    background-color: #d4a373;
+    border-radius: 30px;
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: transparent;
+    color: #d4a373;
+}
+
+/***********************end navbar*************************/
+
+ /****************************start hero section----------------------------*/
+    .hero{
+    height: 100vh;
+    background: linear-gradient(to right, rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.4)),url(../images/coffee-background.avif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 60px;     
+    
+    }
+  
+    .hero-content .main-title {
+    display: block;
+    font-family: 'Playfair Display', serif; 
+    font-style: italic;
+    color: #d4a373;
+    font-weight: 600;
+}
+  .hero-content .sub-title {
+    display: block;
+    font-family: "Playwrite Argentina", cursive;
+    color: #d4a373; 
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+.sub-title , .main-title{
+        font-size: 55px;
+
+}
+.animated-dots{
+    display: inline-block;
+    position: relative;
+    width: 0;
+    overflow: hidden;
+    animation: typing-dots 3s steps(4, end) infinite;
+}
+
+@keyframes typing-dots {
+    0%, 100% { width: 0; }  /* تبدأ وتخلص وهي مختفية */
+    30%, 70% { width: 1em; } /* تظهر وتثبت شوية في النص */
+}
+.hero-btn{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+}
+.btn-primary{
+    background-color: #d4a373; 
+    color: #121212;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+
+}
+.btn-primary:hover {
+    background-color:  transparent;
+    color: #d4a373;
+    border-radius: 30px;
+}
+.btn-outline{
+    background-color: transparent;
+    color: #d4a373;
+    border: 1.5px solid #d4a373; 
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+}
+.btn-outline:hover {
+    background-color: #d4a373;
+    color: #121212;
+}
+.btn-outline , .btn-primary{
+ text-decoration: none; 
+ padding: 14px 32px;
+}
+
+ /****************************end hero section------------------------------*/
+
+  /****************************start about section---------------------------*/
+  .about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    background-color: #121212;
+    color:#f5f5f5;
+    padding: 80px 60px;
+    gap:  60px;
+  }
+  .about-img {
+    border-radius: 15px;
+    object-fit: cover;
+    
+  }
+  .about-img img{
+    width: 100%;
+    height: auto;
+  }
+   .about-content , .about-img{
+    flex: 1;
+   }
+  .about-content h3 {
+    font-size: 15px;
+    color: #d4a373; 
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  .about-content h2, h3{
+      letter-spacing: 2px;
+
+  }
+   .about-content h2{
+    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+    line-height: 1.2;
+   }
+   .about-content p {
+    color: #b0b0b0;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.about-feature{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.feature-item{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+.feature-icon{
+    color: #d4a373;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.feature-icon:hover{
+    color: #f5f5f5;
+}
+
+.feature-title:hover{
+    color: #d4a373;
+}
+
+ /****************************end about section------------------------------*/
+
+/****************************start menu section------------------------------*/
+.menu{
+    padding: 0 60px;
+    color: #f5f5f5;
+    text-align: center;
+}
+.title{
+    margin-bottom: 50px;
+
+}
+.title h5{
+    font-size: 14px;
+    color: #d4a373; 
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-weight: 600;
+
+}
+.title h2{
+    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+    color: #f5f5f5;
+    letter-spacing: 1px;
+}
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 20px; /* دي المسافة اللي هتبعد الكروت عن بعضها بالعرض وبكل انتظام */
+    margin: 0 auto; /* عشان السكشن يبقى في النص*/
+    max-width: 1250px;
+
+}
+.menu-card {
+    background-color: #1e1e1e; 
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    padding: 10px;
+    
+    
+}
+.menu-card:hover {
+    transform: translateY(-5px); 
+}
+
+.menu-img img {
+    width: 100%;
+    height: auto;
+    
+}
+.menu-info {
+    padding: 20px;
+}.menu-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f5f5f5;
+    margin-bottom: 8px;
+    font-family: 'Playfair Display', serif;
+}
+.menu-description {
+    font-size: 13px;
+    color: #b0b0b0;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.menu-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d4a373; 
+    display: block;
+}
+.menu-btn {
+    margin: 40px 0;    
+}
+.menu-btn button{
+   padding: 12px 30px;
+   background-color: #d4a373;
+   border: 2px solid #d4a373;
+   border-radius: 30px;
+   color: #121212;
+   font-weight: 700;
+   cursor: pointer;
+   transition: 0.3s ease;
+}
+.menu-btn button:hover {
+    background-color:transparent ;
+    color:#d4a373;
+}
+/****************************end menu section------------------------------*/
+
+/****************************start features section------------------------*/
+.features-container{
+  background-color:  rgb(30, 30, 30);;
+  padding: 40px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+}
+
+.features-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1250px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* عشان لو الشاشة صغرت العناصر تنزل بانتظام وما تزنقش */
+    gap: 30px;
+}
+.feature-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.feature-icon i{
+    font-size: 30px;
+    color: #d4a373;
+}
+.feature-text h4{
+    font-size: 13px;
+    font-weight: 700;
+    color: #f5f5f5;
+    letter-spacing: 1.5px ;
+    margin-bottom: 5px;
+}
+.feature-text p{
+    font-size: 12px;
+    color:#b0b0b0;
+    line-height: 1.4;
+}
+/****************************end features section------------------------*/
+
+
+/****************************start gallery section------------------------*/
+.gallery{
+    text-align: center;
+    margin-top: 20px;
+}
+.gallery-container{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 20px;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+.gallery-img {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.gallery-img img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition:  0.9s ease;
+}
+.gallery-img img:hover {
+    transform: scale(1.1);
+}
+/****************************end gallery section------------------------*/
+
+
+/***********************start footer***********************/
+footer{
+    background-color:#121212;
+    color: #b0b0b0;
+    padding: 70px 40px 20px 40px;
+    font-family: sans-serif;
+    
+}
+.footer-container{
+    max-width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr 1.3fr; /* توزيع الأعمدة بشكل متناسق */
+    gap: 40px;
+    padding-bottom: 50px;
+}
+.footer-logo {
+    padding-top: 10px;
+}
+.footer-col h2,
+.footer-col h4 {
+    color: #f5f5f5;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.social-icon i{
+    color: #d4a373;
+    padding-top: 20px;
+}
+.social-icon{
+    display: flex;
+    gap: 10px;
+}
+
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+.footer-col ul li a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #d4a373;
+}
+/* العناوين والفرع (العمود الثالث) */
+.location-item {
+    margin-bottom: 15px;
+}
+
+.location-item .city {
+    color: #aaa;
+    font-size: 13px;
+    margin: 0 0 3px 0;
+}
+
+.location-item span {
+    color: #fff;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.location-item span i {
+    color: #d4a373;
+    font-size: 12px;
+}
+
+/* المواعيد والطلب (العمود الرابع) */
+.footer-col p {
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 8px;
+}
+
+
+
+/***********************end footer***********************/
+
+
+/*                   RESPONSIVE MEDIA QUERIES                   */
+
+
+
+/* 1. الشاشات الكبيرة / اللابتوب الصغير  */
+@media (max-width: 1200px) {
+
+
+}
+
+
+
+@media (max-width: 992px) {
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+}
+}
+
+
+
+/*  الموبايلات الكبيرة / التابلت الرأسي  */
+@media (max-width: 768px) {
+/***********************start navbar***********************/
+   .navbar { /* (أو اسم الكلاس الحقيقي للـ Nav عندك) */
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+        text-align: center;
+        
+    }
+    .sub-title, .main-title {
+    font-size: 37px;
+    }
+
+
+    
+
+        /***********************end navbar***********************/
+
+       /*********************start hero***********************/
+    .hero{
+            background-position:left;
+
+    }       
+    .hero-content .main-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    
+    }
+    .hero-content .sub-title{
+    text-align: center;
+    }
+    .btn {
+      display: none;
+    }
+    .hero-btn {
+            padding-top: 30px;
+            justify-content: center;
+    }
+
+       /*********************end hero***********************/
+
+       /*********************start about***********************/
+    .about{
+        flex-direction: column;
+        padding: 0;
+    }
+    .about-feature {
+            padding: 0 60px;
+    }
+
+    .about-img {
+        order: 2;
+     }
+    .about-content{
+        order: 1;
+     }
+     .about-content h2 {
+      font-size: 27px;
+     }
+     .about-content h2 , h3, p{
+        text-align: center;
+     }
+
+      /*********************end about***********************/
+
+      /*********************start menu***********************/
+       .menu-container {
+        grid-template-columns: repeat(1, 1fr);
+       }
+
+      /*********************end menu***********************/
+
+     /*********************start gallery***********************/
+     .title h2 { 
+        font-size: 30px;
+     }
+      .gallery-container {
+            grid-template-columns: repeat(1, 1fr);
+
+      }
+     /*********************end gallery***********************/
+  /*********************start feature***********************/
+
+     .features-container {
+            gap: 43px;
+}
+/*********************start footer***********************/
+    
+    
+    footer {
+        padding: 40px 20px 20px 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr; /* هيخلي كل الأعمدة تحت بعضها (عمود واحد) */
+        gap: 35px;
+        text-align: center; /* توسيط النصوص في الموبايل لشكل أشيك */
+    }
+
+    /* توسيط أيقونات السوشيال في الموبايل */
+    .social-icon {
+        justify-content: center;
+    }
+
+    /* ضبط أيقونات اللوكيشن لتكون في المنتصف مع النص */
+    .location-item span {
+        justify-content: center;
+    }
+
+     }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 576px) {
+    
+    
+
+    /*********************end footer***********************/
+}
