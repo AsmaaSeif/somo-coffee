@@ -366,21 +366,20 @@ transition: transform 0.3s ease;
   padding: 40px 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1250px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* عشان لو الشاشة صغرت العناصر تنزل بانتظام وما تزنقش */
+  gap: 30px;
 }
 
-.features-container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 1250px;
-    margin: 0 auto;
-    flex-wrap: wrap; /* عشان لو الشاشة صغرت العناصر تنزل بانتظام وما تزنقش */
-    gap: 30px;
-}
+
 .feature-item{
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 .feature-icon i{
     font-size: 30px;
