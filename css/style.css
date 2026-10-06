@@ -112,7 +112,7 @@ transition: transform 0.3s ease;
 
  /****************************start hero section----------------------------*/
     .hero{
-    /* height: 100vh; */
+    height: 100vh;
     background: linear-gradient(to right, rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.4)),url(../images/coffee-background.avif);
     background-position: center;
     background-size: cover;
