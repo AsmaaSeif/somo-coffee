@@ -677,8 +677,8 @@ footer{
 @media (max-width: 576px) {
     
     .hero {
-        height: 100svh;
-        background-attachment: scroll; 
+           background: unset;
+
     }
 
     /*********************end footer***********************/
