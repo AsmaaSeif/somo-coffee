@@ -11,7 +11,7 @@ body{
 /***********************start navbar***********************/
 
 .navbar{
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -24,7 +24,11 @@ body{
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     z-index: 1000;
+    transition: transform 0.3s ease-in-out;
     
+}
+.navbar.hidden {
+    transform: translateY(-100%);
 }
 .logo{
     font-size: 25px;
@@ -544,10 +548,8 @@ footer{
         gap: 15px;
         padding: 20px;
         text-align: center;
-        position:absolute;
-        
+        position:fixed;
          background-color: unset;
-        -webkit-backdrop-filter: unset;
        
     
         
