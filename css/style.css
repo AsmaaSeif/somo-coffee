@@ -548,7 +548,7 @@ footer{
         gap: 15px;
         padding: 20px;
         text-align: center;
-        position:fixed;
+        position: relative;
          background-color: unset;
        
     
