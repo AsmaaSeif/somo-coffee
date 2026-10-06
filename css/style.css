@@ -112,7 +112,7 @@ transition: transform 0.3s ease;
 
  /****************************start hero section----------------------------*/
     .hero{
-    height: 100vh;
+    /* height: 100vh; */
     background: linear-gradient(to right, rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.4)),url(../images/coffee-background.avif);
     background-position: center;
     background-size: cover;
@@ -191,7 +191,7 @@ transition: transform 0.3s ease;
 }
 .btn-outline , .btn-primary{
  text-decoration: none; 
- padding: 14px 32px;
+ padding: 10px 20px;
 }
 
  /****************************end hero section------------------------------*/
@@ -567,8 +567,7 @@ footer{
        /*********************start hero***********************/
     .hero{
             background-position:center;
-            height: 100svh; 
-             background-attachment: scroll;
+            background-attachment: scroll;
 
     }       
     .hero-content .main-title {
@@ -586,6 +585,9 @@ footer{
     }
     .hero-btn {
             justify-content: center;
+    }
+    .btn-outline , .btn-primary{
+        max-width: 250px;
     }
 
        /*********************end hero***********************/
